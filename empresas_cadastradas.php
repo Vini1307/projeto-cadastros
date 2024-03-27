@@ -68,15 +68,14 @@
                             <?php
                                 $sql = "Select * from clientes";
                                 $pesquisar = mysqli_query ($link, $sql);
-                                while ($linha = $pesquisar->fetch_assoc) {
+                                while ($linha = $pesquisar->fetch_assoc()) {
                                     echo "  <tr>
-                                                <td>".$linha['id']."</td>
                                                 <td>".$linha['nome']."</td>
                                                 <td>".$linha['email']."</td>
                                                 <td>".$linha['empresa']."</td>
                                                 <td>".$linha['cnpj']."</td>
-                                                <td>"imagem"</td>
-                                                <td>"imagem"</td>
+                                                <td><img src='imagens/lapis.png' class='lapis'></td>
+                                                <td><img src='imagens/lata-de-lixo.png' class='lixo'></td>
                                             </tr>";
                                 }
 
