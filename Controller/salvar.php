@@ -7,13 +7,22 @@
     $cnpj = filter_input(INPUT_GET, "cnpj", FILTER_SANITIZE_SPECIAL_CHARS);
 
     $sql = "INSERT INTO clientes (nome, email, empresa, cnpj) VALUES ('$nome', '$email', '$empresa', '$cnpj')";
-    echo $sql;
 
     $inserir = mysqli_query($link, $sql);
     if($inserir) {
-        echo "Cadastrado com Sucesso";
+        echo "
+            <script>
+                alert('Salvo com sucesso');
+                Window.location.href='../index.php';
+            </script>
+        ";
     } else {
-        echo "Erro ao cadastrar: " . mysqli_error($link);
+        echo "
+        <script>
+            alert('Erro ao Salvar');
+            Window.location.href='../index.php';
+        </script>
+        ";
     }
 
     mysqli_close($link);

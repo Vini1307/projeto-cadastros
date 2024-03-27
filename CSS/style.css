@@ -90,7 +90,7 @@ body {
     /* transform: scale(2, 0.5); */
 
     animation: move-up6 2s ease-in infinite alternate-reverse;
-    
+
 }
 
 .container::after {
@@ -101,7 +101,7 @@ body {
     height: 250px;
     border-radius: 50%;
     background: #5FBDFF;
-    
+
     animation: move-up6 2s ease-in infinite alternate-reverse;
 }
 @keyframes move-up6 {
@@ -244,7 +244,7 @@ a {
     padding: 0,5rem 1rem 1rem 2.7rem;
     border-radius: 10px;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     background-color: #161623;
     border: 1px solid rgba(255, 255, 255, 0.4);
     transition: 0.5s ease;
@@ -267,4 +267,33 @@ a {
     color: #fff;
     font-weight: 100;
     font-size: 0.7rem;
+}
+
+/*PAGINA EMPRESAS CADASTRADAS*/
+
+/* styles.css */
+
+.home {
+    background-color: #050b1e;
+    border: 1px solid #050b1e;
+    color: #fff;
+    padding: 3px 20px;
+    font-size: 16px;
+    border-radius: 55px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.home:hover {
+    background-color: #fff;
+    color: #050b1e;
+    border-color: #050b1e;
+}
+
+.editar {
+    width:36px ;
+}
+
+.lixo {
+    width:36px ;
 }
