@@ -74,8 +74,13 @@
                                                 <td>".$linha['email']."</td>
                                                 <td>".$linha['empresa']."</td>
                                                 <td>".$linha['cnpj']."</td>
-                                                <td><img src='imagens/lapis.png' class='lapis'></td>
-                                                <td><img src='imagens/lata-de-lixo.png' class='lixo'></td>
+                                                <td>
+                                                    <img src='imagens/lapis.png' class='lapis'>
+                                                </td>
+                                                <td>
+                                                <a href='Controller/excluir.php?nome=".$linha['nome']."'></a>
+                                                    <img src='imagens/lata-de-lixo.png' class='lixo'>
+                                                </td>
                                             </tr>";
                                 }
 

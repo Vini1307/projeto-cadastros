@@ -44,7 +44,7 @@
         <title>CLIENTES JÁ CADASTRADOS</title>
     </head>
     <body>
-        <button onclick="window.location.href = 'index copy.html';" class="home">Home</button>
+        <button onclick="window.location.href = 'index.php';" class="home">Home</button>
         <div class="container2">
             <div class="row">
                 <div class="col">
@@ -68,15 +68,19 @@
                             <?php
                                 $sql = "Select * from clientes";
                                 $pesquisar = mysqli_query ($link, $sql);
-                                while ($linha = $pesquisar->fetch_assoc) {
+                                while ($linha = $pesquisar->fetch_assoc()) {
                                     echo "  <tr>
-                                                <td>".$linha['id']."</td>
                                                 <td>".$linha['nome']."</td>
                                                 <td>".$linha['email']."</td>
                                                 <td>".$linha['empresa']."</td>
                                                 <td>".$linha['cnpj']."</td>
-                                                <td><img class="editar" src="imagens/lapis.png"></td>
-                                                <td><img class="lixo" src="imagens/lata-de-lixo.png"></td>
+                                                <td>
+                                                    <img src='imagens/lapis.png' class='lapis'>
+                                                </td>
+                                                <td>
+                                                <a href='Controller/excluir.php?nome=".$linha['nome']."'></a>
+                                                    <img src='imagens/lata-de-lixo.png' class='lixo'>
+                                                </td>
                                             </tr>";
                                 }
 
