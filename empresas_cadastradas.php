@@ -78,7 +78,7 @@
                                                     <img src='imagens/lapis.png' class='lapis'>
                                                 </td>
                                                 <td>
-                                                <a href='Controller/excluir.php?nome=".$linha['nome']."'></a>
+                                                <a href='Controller/excluir.php?nome=".$linha['nome']."'>
                                                     <img src='imagens/lata-de-lixo.png' class='lixo'>
                                                 </td>
                                             </tr>";
