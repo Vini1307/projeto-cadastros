@@ -56,6 +56,7 @@
                     <table class="table table-light table-hover">
                         <thead>
                             <tr>
+                                <th>N°</th>
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Empresa</th>
@@ -70,6 +71,7 @@
                                 $pesquisar = mysqli_query ($link, $sql);
                                 while ($linha = $pesquisar->fetch_assoc()) {
                                     echo "  <tr>
+                                                <td>".$linha['id']."</td>
                                                 <td>".$linha['nome']."</td>
                                                 <td>".$linha['email']."</td>
                                                 <td>".$linha['empresa']."</td>
@@ -78,8 +80,9 @@
                                                     <img src='imagens/lapis.png' class='lapis'>
                                                 </td>
                                                 <td>
-                                                <a href='Controller/excluir.php?nome=".$linha['nome']."'>
-                                                    <img src='imagens/lata-de-lixo.png' class='lixo'>
+                                                    <a href='Controller/excluir.php?id=".$linha['id']."' onclick='return confirm(\"Tem certeza que deseja excluir este cliente?\")'>
+                                                        <img src='imagens/lata-de-lixo.png' class='lixo'>
+                                                    </a>
                                                 </td>
                                             </tr>";
                                 }
