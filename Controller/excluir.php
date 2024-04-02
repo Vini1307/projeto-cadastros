@@ -2,8 +2,7 @@
     include_once "conexao.php";
 
     $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);
-    
-    $sql = "DELETE FROM clientes WHERE id = '$id'";
+    $sql = "DELETE FROM clientes WHERE id = '$id';";
 
     $inserir = mysqli_query($link, $sql);
     if($inserir) {

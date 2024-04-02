@@ -1,5 +1,7 @@
 <?php
     include_once "Controller/conexao.php";
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +60,8 @@
                 <div class="col -8">
                     <form method="get" action="Controller/salvar.php">
                         <div class="mt-3 form-floating">
-                            <input type="text" class="form-control" id="nome" name="nome" >
+                            <input type="text" class="form-control" id="nome" name="nome" 
+                            value="<?php echo filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);?>">
                             <label for="nome" class="form-label">Nome</label>
                         </div>
                         <div class="mt-3 form-floating">
