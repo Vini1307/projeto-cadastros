@@ -1,6 +1,7 @@
 <?php
     include_once "conexao.php";
 
+    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);
     $nome = filter_input(INPUT_GET, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_GET, "email", FILTER_SANITIZE_SPECIAL_CHARS);
     $empresa = filter_input(INPUT_GET, "empresa", FILTER_SANITIZE_SPECIAL_CHARS);

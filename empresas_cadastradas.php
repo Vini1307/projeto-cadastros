@@ -57,26 +57,36 @@
                 </div>
                 <div class="col -8">
                     <form method="get" action="Controller/salvar.php">
+                    <div class="mt-3 form-floating">
+                            <input type="text" class="form-control" id="id" name="id" 
+                            value="<?php echo filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);?>">
+                            <label for="id" class="form-label">ID</label>
+                        </div>
+
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="nome" name="nome" 
                             value="<?php echo filter_input(INPUT_GET, "nome", FILTER_SANITIZE_SPECIAL_CHARS);?>">
                             <label for="nome" class="form-label">Nome</label>
                         </div>
+
                         <div class="mt-3 form-floating">
                             <input type="email" class="form-control" id="email" name="email" 
                             value="<?php echo filter_input(INPUT_GET, "email", FILTER_SANITIZE_SPECIAL_CHARS);?>">
                             <label for="email" class="form-label">E-mail</label>
                         </div>
+
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="empresa" name="empresa" 
                             value="<?php echo filter_input(INPUT_GET, "empresa", FILTER_SANITIZE_SPECIAL_CHARS);?>">
                             <label for="empresa" class="form-label">Empresa</label>
                         </div>
+
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="cnpj" name="cnpj" 
                             value="<?php echo filter_input(INPUT_GET, "cnpj", FILTER_SANITIZE_SPECIAL_CHARS);?>">
                             <label for="cnpj" class="form-label">Cnpj</label>
                         </div>
+
                         <div class="mt-3 form-floating">
                             <div class="row">
                                 <div class="col"><button type="button" class="btn btn-primary form-control botaonovo">Novo</div>
