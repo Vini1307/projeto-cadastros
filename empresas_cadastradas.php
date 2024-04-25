@@ -118,7 +118,7 @@
                     <table class="table table-light table-hover">
                         <thead>
                             <tr>
-                                <th>N°</th>
+                                <th>ID</th>
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Empresa</th>
