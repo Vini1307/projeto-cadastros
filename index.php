@@ -60,13 +60,8 @@
                 <div class="col -8">
                     <form method="get" action="Controller/salvar.php">
                         <div class="mt-3 form-floating">
-                            <input type="text" class="form-control" id="nome" name="nome" 
-                            value="<?php echo filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);?>">
+                            <input type="text" class="form-control" id="nome" name="nome" >
                             <label for="nome" class="form-label">Nome</label>
-                        </div>
-                        <div class="mt-3 form-floating">
-                            <input type="email" class="form-control" id="email" name="email" >
-                            <label for="email" class="form-label">E-mail</label>
                         </div>
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="empresa" name="empresa" >
@@ -75,6 +70,27 @@
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="cnpj" name="cnpj" >
                             <label for="cnpj" class="form-label">Cnpj</label>
+                        <div class="mt-3 form-floating">
+                                <input type="email" class="form-control" id="email" name="email" >
+                                <label for="email" class="form-label">E-mail</label>
+                        </div>   
+                        <div class="mt-3 form-floating">
+                            <input type="password" class="form-control" id="senha" name="senha">
+                            <label for="senha" class="form-label">Senha</label>
+                            <span toggle="#senha" class="fa fa-fw fa-eye field-icon toggle-password" style="color: #ffffff;"></span>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const togglePassword = document.querySelector('.toggle-password');
+                                    const passwordField = document.querySelector(togglePassword.getAttribute('toggle'));
+                            
+                                    togglePassword.addEventListener('click', function() {
+                                        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                                        passwordField.setAttribute('type', type);
+                                        this.classList.toggle('fa-eye-slash');
+                                    });
+                                });
+                            </script>
+                        </div> 
                         </div>
                         <div class="mt-3 form-floating">
                             <div class="row">

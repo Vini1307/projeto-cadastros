@@ -62,22 +62,42 @@
                             <label for="nome" class="form-label">Nome</label>
                         </div>
                         <div class="mt-3 form-floating">
-                            <input type="email" class="form-control" id="email" name="email" >
-                            <label for="email" class="form-label">E-mail</label>
-                        </div>
-                        <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="empresa" name="empresa" >
                             <label for="empresa" class="form-label">Empresa</label>
                         </div>
                         <div class="mt-3 form-floating">
                             <input type="text" class="form-control" id="cnpj" name="cnpj" >
                             <label for="cnpj" class="form-label">Cnpj</label>
+                        <div class="mt-3 form-floating">
+                                <input type="email" class="form-control" id="email" name="email" >
+                                <label for="email" class="form-label">E-mail</label>
+                        </div>   
+                        <div class="mt-3 form-floating">
+                            <input type="password" class="form-control" id="senha" name="senha">
+                            <label for="senha" class="form-label">Senha</label>
+                            <span toggle="#senha" class="fa fa-fw fa-eye field-icon toggle-password" style="color: #ffffff;"></span>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const togglePassword = document.querySelector('.toggle-password');
+                                    const passwordField = document.querySelector(togglePassword.getAttribute('toggle'));
+                            
+                                    togglePassword.addEventListener('click', function() {
+                                        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                                        passwordField.setAttribute('type', type);
+                                        this.classList.toggle('fa-eye-slash');
+                                    });
+                                });
+                            </script>
+                        </div> 
                         </div>
                         <div class="mt-3 form-floating">
                             <div class="row">
                                 <div class="col"><button type="submit" class="btn btn-primary form-control botaosalvar">Salvar</div>
                                 <div class="col">
                                     <button type="button" class="btn btn-danger form-control botaoexcluir" onclick="window.location.href='empresas_cadastradas.html'">Empresa Cadastradas</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-primary form-control botaosalvar" onclick="window.location.href='login.html'">Login</button>
                                 </div>
                             </div>
                         </div>
