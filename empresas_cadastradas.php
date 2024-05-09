@@ -87,6 +87,7 @@
                             <label for="cnpj" class="form-label">Cnpj</label>
                         </div>
 
+
                         <div class="mt-3 form-floating">
                             <div class="row">
                                 <div class="col"><button type="button" class="btn btn-primary form-control botaonovo">Novo</div>

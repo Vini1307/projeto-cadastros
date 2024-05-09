@@ -6,6 +6,7 @@
     $email = filter_input(INPUT_GET, "email", FILTER_SANITIZE_SPECIAL_CHARS);
     $empresa = filter_input(INPUT_GET, "empresa", FILTER_SANITIZE_SPECIAL_CHARS);
     $cnpj = filter_input(INPUT_GET, "cnpj", FILTER_SANITIZE_SPECIAL_CHARS);
+    $senha = filter_input(INPUT_GET, "senha", FILTER_SANITIZE_SPECIAL_CHARS);
 
         if ($nome > 0) {
             $sql = "UPDATE clientes SET nome = '$nome', email = '$email', empresa = '$empresa', cnpj = '$cnpj' WHERE nome = '$nome';";
