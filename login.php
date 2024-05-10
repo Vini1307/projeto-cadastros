@@ -57,7 +57,7 @@
                 </div>
                 
                 <div class="col -8">
-                    <form method="get" action="Controller/salvar.php">
+                    <form method="post" action="Controller/validar_login.php">
                         <div class="mt-3 form-floating">
                                 <input type="email" class="form-control" id="email" name="email" >
                                 <label for="email" class="form-label">E-mail</label>
@@ -81,9 +81,8 @@
                         </div> 
                         <div class="mt-3 form-floating">
                             <div class="row">
-                                <div class="col"><button type="submit" class="btn btn-primary form-control botaosalvar">Salvar</div>
                                 <div>
-                                    <button type="button" class="btn btn-primary form-control botaosalvar" onclick="window.location.href='empresas_cadastradas.php'">Login</button>
+                                    <button type="submit" class="btn btn-primary form-control">Login</button>
                                 </div>
                             </div>
                         </div>
