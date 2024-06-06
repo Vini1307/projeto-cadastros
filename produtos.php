@@ -210,8 +210,8 @@
             <h1>Eskistore</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                     <li><a href="#" id="cart-button">Carrinho</a></li>
                 </ul>
             </nav>
@@ -254,7 +254,7 @@
                     <button class="add-to-cart">Comprar</button>
                 </article>
                 <article class="product" data-id="1" data-name="Produto 1" data-price="100.00">
-                    <img class="imagensprodutos" src="imagens/produto1.jpg" alt="Produto 1">
+                    <img class="imagensprodutos" src="imagens/detergente.jpg" alt="Produto 1">
                     <h2>Detergente</h2>
                     <p>Descrição do produto 1</p>
                     <div class="quantity">
@@ -269,7 +269,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Minha Loja. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Eskistore. Todos os direitos reservados.</p>
         </div>
     </footer>
     <div id="cart-popup" class="cart-popup">

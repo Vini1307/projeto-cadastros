@@ -88,6 +88,12 @@
                         </div>
 
                         <div class="mt-3 form-floating">
+                            <input type="text" class="form-control" id="senha" name="senha" 
+                            value="<?php echo filter_input(INPUT_GET, "senha", FILTER_SANITIZE_SPECIAL_CHARS);?>">
+                            <label for="senha" class="form-label">Senha</label>
+                        </div>
+
+                        <div class="mt-3 form-floating">
                             <div class="row">
                                 <div class="col"><button type="button" class="btn btn-primary form-control botaonovo">Novo</div>
                                 <div class="col"><button type="submit" class="btn btn-primary form-control botaosalvar">Salvar</div>
@@ -140,10 +146,12 @@
                                                 <td>".$linha['cnpj']."</td>
                                                 <td>
                                                     <a href='?
+                                                        id=".$linha['id']."&
                                                         nome=".$linha['nome']."&
                                                         email=".$linha['email']."&
                                                         empresa=".$linha['empresa']."&
                                                         cnpj=".$linha['cnpj']."&
+                                                        senha=".$linha['senha']."&
                                                         '>
                                                         <img src='imagens/lapis.png' class='lapis'>
                                                     </a>

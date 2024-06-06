@@ -68,7 +68,7 @@
                             <label for="empresa" class="form-label">Empresa</label>
                         </div>
                         <div class="mt-3 form-floating">
-                            <input type="text" class="form-control" id="cnpj" name="cnpj" >
+                            <input type="number" class="form-control" id="cnpj" name="cnpj" >
                             <label for="cnpj" class="form-label">Cnpj</label>
                         <div class="mt-3 form-floating">
                                 <input type="email" class="form-control" id="email" name="email" >
@@ -98,6 +98,7 @@
                                 <div class="col"><button type="submit" class="btn btn-primary form-control botaosalvar">Salvar</div>
                                 <div class="col">
                                     <button type="button" class="btn btn-danger form-control botaoexcluir" onclick="window.location.href='empresas_cadastradas.php'">Empresa Cadastradas</button>
+                                    <button type="button" class="btn btn-danger form-control botaoexcluir" onclick="window.location.href='produtos.php'">produtos</button>
                                 </div>
                             </div>
                         </div>

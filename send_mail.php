@@ -1,31 +1,30 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta e sanitiza os dados do formulário
+    // Pega os dados do formulário
     $name = htmlspecialchars($_POST['name']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Define o endereço de email para onde a mensagem será enviada
-    $to = "seuemail@exemplo.com"; // Substitua por seu endereço de email
-    $subject = "Nova mensagem de contato de $name";
+    // Configurações do e-mail
+    $to = "vinicius.garcia@aluno.faculdadeimpacta.com.br";
+    $subject = "Mensagem de Contato de $name";
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "Content-Type: text/html; charset=UTF-8";
 
-    // Cria o corpo do email
-    $body = "Nome: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Mensagem:\n$message\n";
+    // Corpo do e-mail
+    $email_content = "<h2>Mensagem de Contato</h2>";
+    $email_content .= "<p><strong>Nome:</strong> $name</p>";
+    $email_content .= "<p><strong>Email:</strong> $email</p>";
+    $email_content .= "<p><strong>Mensagem:</strong><br>$message</p>";
 
-    // Define os cabeçalhos do email
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // Tenta enviar o email
-    if (mail($to, $subject, $body, $headers)) {
+    // Envia o e-mail
+    if (mail($to, $subject, $email_content, $headers)) {
         echo "Mensagem enviada com sucesso!";
     } else {
-        echo "Erro ao enviar a mensagem.";
+        echo "Falha ao enviar a mensagem.";
     }
 } else {
-    echo "Método de solicitação inválido.";
+    echo "Método de requisição inválido.";
 }
 ?>
