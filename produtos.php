@@ -220,10 +220,10 @@
     <main>
         <div class="container">
             <section class="products">
-                <article class="product" data-id="1" data-name="Produto 1" data-price="100.00">
+                <article class="product" data-id="1" data-name="Produto 1" data-price="R$10.00">
                     <img class="imagensprodutos" src="imagens/produto1.jpg" alt="Produto 1">
                     <h2>Pão de forma</h2>
-                    <p>Descrição do produto 1</p>
+                    <p>Pão de forma macio</p>
                     <div class="quantity">
                         <button class="quantity-decrease">-</button>
                         <input type="number" value="1" min="1">
@@ -231,10 +231,10 @@
                     </div>
                     <button class="add-to-cart">Comprar</button>
                 </article>
-                <article class="product" data-id="2" data-name="Produto 2" data-price="200.00">
+                <article class="product" data-id="2" data-name="Produto 2" data-price="R$15.00">
                     <img class="imagensprodutos" src="imagens/produto2.jpg" alt="Produto 2">
                     <h2>Queijo Prato</h2>
-                    <p>Descrição do produto 2</p>
+                    <p>Queijo prato 500g</p>
                     <div class="quantity">
                         <button class="quantity-decrease">-</button>
                         <input type="number" value="1" min="1">
@@ -242,10 +242,10 @@
                     </div>
                     <button class="add-to-cart">Comprar</button>
                 </article>
-                <article class="product" data-id="3" data-name="Produto 3" data-price="300.00">
+                <article class="product" data-id="3" data-name="Produto 3" data-price="R$5.67">
                     <img class="imagensprodutos2" src="imagens/produto3.jpg" alt="Produto 3">
-                    <h2>Farrinha de Trigo</h2>
-                    <p>Descrição do produto 3</p>
+                    <h2>Farinha de Trigo</h2>
+                    <p>Farinha de trigo 30g</p>
                     <div class="quantity">
                         <button class="quantity-decrease">-</button>
                         <input type="number" value="1" min="1">
@@ -253,10 +253,10 @@
                     </div>
                     <button class="add-to-cart">Comprar</button>
                 </article>
-                <article class="product" data-id="1" data-name="Produto 1" data-price="100.00">
+                <article class="product" data-id="1" data-name="Produto 1" data-price="R$5.99">
                     <img class="imagensprodutos" src="imagens/detergente.jpg" alt="Produto 1">
                     <h2>Detergente</h2>
-                    <p>Descrição do produto 1</p>
+                    <p>detergente minuano 200g</p>
                     <div class="quantity">
                         <button class="quantity-decrease">-</button>
                         <input type="number" value="1" min="1">

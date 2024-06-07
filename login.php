@@ -41,14 +41,14 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-        <title>CADASTRO DOS CLIENTES</title>
+        <title>Login - Eskistore</title>
     </head>
     <body>
         <div class="container">
             <div class="login">
             <div class="row">
                 <div class="col">
-                    <h2>Cadastro clientes</h2>
+                    <h2>LOGIN - ESKISTORE</h2>
                 </div>
             </div>
             <div class="row">
@@ -82,9 +82,6 @@
                         <div class="mt-3 form-floating">
                             <div class="row">
                                 <div class="col"><button type="submit" class="btn btn-primary form-control botaosalvar">Salvar</div>
-                                <div>
-                                    <button type="button" class="btn btn-primary form-control botaosalvar" onclick="window.location.href='produtos.php'">Login</button>
-                                </div>
                             </div>
                         </div>
                     </form>

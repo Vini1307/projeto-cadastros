@@ -8,7 +8,29 @@
     $cnpj = filter_input(INPUT_GET, "cnpj", FILTER_SANITIZE_SPECIAL_CHARS);
     $senha = filter_input(INPUT_GET, "senha", FILTER_SANITIZE_SPECIAL_CHARS);
 
+    $check_user = "SELECT id FROM clientes WHERE email = '$email' AND senha = '$senha'";
+    $result_user = mysqli_query($link, $check_user);
+    
+    if ($result_user && mysqli_num_rows($result_user) > 0) {
+        echo "
+            <script>
+                window.location.href = '../produtos.php';
+            </script>
+        ";
+        die();
+    } else {
+        echo "
+            <script>
+                alert('Usuario não encontrado!');
+                window.location.href = '../login.php';
+            </script>
+        ";
+        die();
+    }
+
+
     if ($nome != '' && $email != '' && $empresa != '' && $cnpj != '' && $senha != '') {
+        
         $check_sql = "SELECT id FROM clientes WHERE cnpj = '$cnpj'";
         $result = mysqli_query($link, $check_sql);
 
@@ -46,7 +68,7 @@
         echo "
             <script>
                 alert('Preencha todos os campos');
-                window.location.href = '../index.php';
+                window.location.href = '../login.php';
             </script>
         ";
         return false;

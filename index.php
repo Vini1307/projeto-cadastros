@@ -43,14 +43,14 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-        <title>CADASTRO DOS CLIENTES</title>
+        <title>CADASTRO</title>
     </head>
     <body>
         <div class="container">
             <div class="login">
             <div class="row">
                 <div class="col">
-                    <h2>Cadastro clientes</h2>
+                    <h2>Cadastro</h2>
                 </div>
             </div>
             <div class="row">
